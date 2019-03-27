@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="js/lib/idangerous.swiper.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>提现协议列表</title>
+  </head>
+  <body>
+    <div class="account-list">
+      <div class="list-head">
+        <div class="list-head-page"><span class="page-items">3/3</span></div>
+        <div class="list-head-info">已完成合同签署，应监管要求，贷款发放前您需要再次确认，请完成以下协议签署。备注：部分资金渠道提现需要隔天才可以签署。如有疑问请拨打中安信业客服电话：XXXXXXX</div>
+      </div>
+          <div class="withdrawal-list">
+            <div class="withdrawal-title">安合网提现协议</div>
+            <div class="withdrawal-type"><span class="type-val">已确认</span>
+            </div>
+          </div>
+          <div class="withdrawal-list">
+            <div class="withdrawal-title">凤凰金融提现协议</div>
+            <div class="withdrawal-type"><a class="go-notarize" href="javascript:;">去确认</a>
+            </div>
+          </div>
+      <div class="btn-box"><a class="btn" href="">完成</a></div>
+    </div>
+    <script src="js/lib/jquery-1.12.4.min.js"></script>
+    <script src="js/lib/jquery.enplaceholder.js"></script><!--[if lte IE 9]>
+    <script src="../scripts/vendor/jquery.enplaceholder.js"></script>
+    <script>$('input').placeholder({isUseSpan:true});</script><![endif]-->
+  </body>
+  <script src="js/wap-account.js"></script>
+  <script>
+    //- $('body').messageModel({
+    //-   time:true,
+    //-   content: "还有待确认的提现协议"
+    //- });
+    
+    $('body').messageModel({
+      time:false,
+      content: "合同详签署中…",
+      icon:'icon-signin'
+    });
+    
+    //- $('body').messageModel({
+    //-   time:false,
+    //-   content: "已完成协议签署",
+    //-   icon:'icon-complete'
+    //- });
+  </script>
+</html>

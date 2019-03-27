@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="js/lib/idangerous.swiper.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>签约列表</title>
+  </head>
+  <body>
+    <div class="account-list">
+      <div class="list-head">
+        <div class="list-head-page"><span class="page-items">2/3</span></div>
+        <div class="list-head-info">已完成开户操作，请签署合同，点击可查看合同详情</div>
+      </div>
+      <div class="checkmessage-form">
+        <form action="">
+              <div class="sign-list">
+                <div class="serial-number"><span class="serial-name">编号:</span><span class="serial-val">6646185161</span></div>
+                <div class="sign-money"><span class="money">20000元</span><a class="check-file" href="javascript:;">合同详情</a>
+                  <div class="icon arrow-right"></div>
+                </div>
+              </div>
+              <div class="sign-list">
+                <div class="serial-number"><span class="serial-name">编号:</span><span class="serial-val">5546185161</span></div>
+                <div class="sign-money"><span class="money">30000元</span><a class="check-file" href="javascript:;">合同详情</a>
+                  <div class="icon arrow-right"></div>
+                </div>
+              </div>
+              <div class="sign-list">
+                <div class="serial-number"><span class="serial-name">编号:</span><span class="serial-val">6846185161</span></div>
+                <div class="sign-money"><span class="money">15000元</span><a class="check-file" href="javascript:;">合同详情</a>
+                  <div class="icon arrow-right"></div>
+                </div>
+              </div>
+          <div class="download-all"><a href="javascript:;">下载所有合同</a></div>
+              <div class="input">
+                <div class="content">
+                  <div class="title">验证码</div>
+                  <input class="input-val" type="text" placeholder="请输入验证码"><a class="get-code" href="javascript:;">获取验证码</a>
+                </div>
+                <div class="error-msg">请输入验证码</div>
+                <div class="code-text">验证码已发送到您的手机，10分钟内有效</div>
+              </div>
+          <div class="agree">
+            <label for="checkbox">我已仔细阅读并确认所有合同信息
+              <input id="checkbox" type="checkbox" name="" value="1"><i class="form-icon"></i>
+            </label>
+          </div>
+        </form>
+      </div>
+      <div class="btn-box"><a class="btn" href="javascript:;">立即签署</a></div>
+    </div>
+    <div class="contract-model">
+      <div class="contract-bg"></div>
+      <div class="contract-body">
+        <div class="contract-close"></div>
+        <div class="swiper-container contract-info">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img class="img" src="img/1.jpg" alt="样例图"><img class="img" src="img/1.jpg"></div>
+            <div class="swiper-slide">slider2</div>
+            <div class="swiper-slide">slider3</div>
+          </div>
+        </div>
+        <div class="swiper-page"><span class="prev-page" id="prevBtn"></span><span><i class="active-index">1</i><i class="all-page"></i></span><span class="next-page" id="nextBtn"></span></div>
+      </div>
+    </div>
+    <script src="js/lib/jquery-1.12.4.min.js"></script>
+    <script src="js/lib/jquery.enplaceholder.js"></script><!--[if lte IE 9]>
+    <script src="../scripts/vendor/jquery.enplaceholder.js"></script>
+    <script>$('input').placeholder({isUseSpan:true});</script><![endif]-->
+  </body>
+  <script src="js/city-json.js"></script>
+  <script src="js/modal-popup.js"></script>
+  <script src="js/wap-account.js"></script>
+  <script src="js/lib/idangerous.swiper.min.js"></script>
+  <script>
+    //- $('body').messageModel({
+    //-   time:false,
+    //-   content: "合同签署异常，请联系中安信业客服：0731-84130238"
+    //- });
+    
+    var mySwiper = new Swiper('.swiper-container',{
+          autoplay : false,//可选选项，自动滑动
+          //- loop : true,//可选选项，开启循环,
+          onInit: function(swiper){
+            $('.all-page').text('/'+swiper.slides.length)
+          },
+          onSlideChangeEnd: function(swiper){
+            $('.active-index').text(swiper.activeIndex+1);
+          }
+        })
+        $('#prevBtn').click(function(){
+          mySwiper.swipePrev();
+          $('.active-index').text(mySwiper.activeIndex+1);
+        })
+        $('#nextBtn').click(function(){
+          mySwiper.swipeNext();
+          $('.active-index').text(mySwiper.activeIndex+1);
+        })
+    
+        $('.contract-close').click(function(){
+          $('.contract-model').fadeOut();
+        })
+        $('.check-file').click(function(){
+          $('.contract-model').fadeIn();
+        })
+  </script>
+</html>

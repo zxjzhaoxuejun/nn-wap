@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="js/lib/idangerous.swiper.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>扣款卡验证</title>
+  </head>
+  <body>
+    <div class="account-list">
+      <div class="list-head head-bg">
+        <div class="list-head-info">请进行银行卡四要素验证，确保代扣银行卡可正常进行还款</div>
+      </div>
+      <div class="checkmessage-form">
+        <form action="">
+              <div class="input error">
+                <div class="content">
+                  <div class="title">持卡人</div>
+                  <input class="input-val" type="text" placeholder="请输入">
+                </div>
+                <div class="error-msg">请输入持卡人</div>
+              </div>
+              <div class="input">
+                <div class="content">
+                  <div class="title">银行卡号</div>
+                  <input class="input-val" type="number" placeholder="请输入">
+                </div>
+                <div class="error-msg">请输入银行卡号</div>
+              </div>
+              <div class="input">
+                <div class="content">
+                  <div class="title">开户城市</div>
+                  <input class="input-val choose" type="text" placeholder="请选择" readonly>
+                  <div class="icon"></div>
+                </div>
+                <div class="error-msg">请选择开户城市</div>
+              </div>
+              <div class="input">
+                <div class="content">
+                  <div class="title">开户银行</div>
+                  <input class="input-val" type="text" placeholder="请输入">
+                </div>
+                <div class="error-msg">请输入开户行</div>
+              </div>
+              <div class="input">
+                <div class="content">
+                  <div class="title">预留手机</div>
+                  <input class="input-val" type="tel" placeholder="请输入">
+                </div>
+                <div class="error-msg">请输入手机号</div>
+              </div>
+              <div class="input">
+                <div class="content">
+                  <div class="title">验证码</div>
+                  <input class="input-val" type="text" placeholder="请输入验证码"><a class="get-code" href="javascript:;">获取验证码</a>
+                </div>
+                <div class="error-msg">请输入验证码</div>
+                <div class="code-text">验证码已发送到您的手机，10分钟内有效</div>
+              </div>
+        </form>
+      </div>
+      <div class="btn-box"><a class="btn" href="">完成</a></div>
+    </div>
+    <script src="js/lib/jquery-1.12.4.min.js"></script>
+    <script src="js/lib/jquery.enplaceholder.js"></script><!--[if lte IE 9]>
+    <script src="../scripts/vendor/jquery.enplaceholder.js"></script>
+    <script>$('input').placeholder({isUseSpan:true});</script><![endif]-->
+  </body>
+  <script src="js/city-json.js"></script>
+  <script src="js/modal-popup.js"></script>
+  <script src="js/wap-account.js"></script>
+</html>
