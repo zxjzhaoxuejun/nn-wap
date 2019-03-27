@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="17px" height="16px" viewBox="0 0 17 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>分组</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="城市三级联动2" transform="translate(-340.000000, -405.000000)">
+            <g id="分组" transform="translate(339.000000, 404.000000)">
+                <rect id="矩形" fill-rule="nonzero" x="0" y="0" width="19" height="19"></rect>
+                <g id="Group-3" transform="translate(0.500000, 2.000000)" stroke="#B9AFAF" stroke-linecap="round" stroke-width="1.5">
+                    <path d="M1.85294118,0.5 L16.554804,14.2217909" id="Path-69-Copy" transform="translate(9.176471, 7.411765) scale(-1, 1) translate(-9.176471, -7.411765) "></path>
+                    <g id="Group-2">
+                        <g id="Group" transform="translate(9.000000, 7.500000) scale(-1, 1) translate(-9.000000, -7.500000) translate(0.500000, 0.000000)">
+                            <path d="M0.852941176,0.5 L15.554804,14.2217909" id="Path-69-Copy" transform="translate(8.176471, 7.411765) scale(-1, 1) translate(-8.176471, -7.411765) "></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
