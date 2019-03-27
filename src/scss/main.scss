@@ -1,0 +1,11 @@
+@import "./partials/variables";
+@import "./partials/normalize";
+@import "./partials/account-list";
+@import "./partials/msg-model";
+@import "./partials/modal-popup";
+
+body{
+  font-family: "Microsoft Yahei", "微软雅黑", Arial, "Helvetica",
+    "Microsoft YaHei New", "STXihei", "华文细黑", "SimHei", "黑体", sans-serif;
+}
+

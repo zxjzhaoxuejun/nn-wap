@@ -1,0 +1,31 @@
+extend partials/layout.pug
+
+block title
+  title 多渠道验证
+
+block main
+  include ./partials/mixins.pug
+  .account-list
+    .list-head.head-bg
+      .list-head-info 为确保代扣通道正常使用，除去“金融联”通道验证，您还需要验证以下代扣通道
+    
+    .checkmessage-form
+      form(action="")
+        +input('安合网', 'text',"请输入验证码", true, '请输入验证码',false)(class="error")
+
+        +input('xx金融', 'text',"请输入验证码", true, '请输入验证码',false)(class="code-msg")
+
+        +input('yy金融', 'text',"请输入验证码", true, '请输入验证码',true)
+
+        +input('zz金融', 'text',"请输入验证码", true, '请输入验证码',false)
+
+
+    
+    
+    .btn-box
+      a.btn(href="") 完成
+
+block individual-script
+  script(src='../js/city-json.js')
+  script(src="../js/modal-popup.js")
+  script(src="../js/wap-account.js")

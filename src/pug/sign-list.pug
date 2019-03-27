@@ -1,0 +1,87 @@
+extend partials/layout.pug
+
+block title
+  title 签约列表
+
+block main
+  include ./partials/mixins.pug
+  .account-list
+    .list-head
+      .list-head-page
+        span.page-items 2/3
+      .list-head-info 已完成开户操作，请签署合同，点击可查看合同详情
+    
+    .checkmessage-form
+      form(action="")
+        +sign-list('6646185161','20000元')
+
+        +sign-list('5546185161','30000元')
+
+        +sign-list('6846185161','15000元')
+
+        .download-all
+          a(href="javascript:;") 下载所有合同
+
+        +input('验证码', 'text',"请输入验证码", true, '请输入验证码',false)
+
+        .agree
+          label(for="checkbox") 我已仔细阅读并确认所有合同信息
+            input(id="checkbox",type="checkbox",name="", value="1")
+            i.form-icon
+    .btn-box
+      a.btn(href="javascript:;") 立即签署
+  
+  .contract-model
+    .contract-bg
+    .contract-body
+      .contract-close
+      .swiper-container.contract-info
+        .swiper-wrapper
+          .swiper-slide
+            img.img(src="../img/1.jpg",alt="样例图")
+            img.img(src="../img/1.jpg")
+          .swiper-slide slider2
+          .swiper-slide slider3
+      .swiper-page
+        span#prevBtn.prev-page
+        span
+          i.active-index 1
+          i.all-page
+        span#nextBtn.next-page
+
+block individual-script
+  script(src='../js/city-json.js')
+  script(src="../js/modal-popup.js")
+  script(src="../js/wap-account.js")
+  script(src="../lib/idangerous.swiper.min.js")
+  script.
+    //- $('body').messageModel({
+    //-   time:false,
+    //-   content: "合同签署异常，请联系中安信业客服：0731-84130238"
+    //- });
+
+    var mySwiper = new Swiper('.swiper-container',{
+          autoplay : false,//可选选项，自动滑动
+          //- loop : true,//可选选项，开启循环,
+          onInit: function(swiper){
+            $('.all-page').text('/'+swiper.slides.length)
+          },
+          onSlideChangeEnd: function(swiper){
+            $('.active-index').text(swiper.activeIndex+1);
+          }
+        })
+        $('#prevBtn').click(function(){
+          mySwiper.swipePrev();
+          $('.active-index').text(mySwiper.activeIndex+1);
+        })
+        $('#nextBtn').click(function(){
+          mySwiper.swipeNext();
+          $('.active-index').text(mySwiper.activeIndex+1);
+        })
+
+        $('.contract-close').click(function(){
+          $('.contract-model').fadeOut();
+        })
+        $('.check-file').click(function(){
+          $('.contract-model').fadeIn();
+        })

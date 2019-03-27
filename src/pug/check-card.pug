@@ -1,0 +1,35 @@
+extend partials/layout.pug
+
+block title
+  title 扣款卡验证
+
+block main
+  include ./partials/mixins.pug
+  .account-list
+    .list-head.head-bg
+      .list-head-info 请进行银行卡四要素验证，确保代扣银行卡可正常进行还款
+    
+    .checkmessage-form
+      form(action="")
+        +input('持卡人', 'text',"请输入", false, '请输入持卡人',false)(class="error")
+
+        +input('银行卡号', 'number',"请输入", false, '请输入银行卡号',false)
+
+        +select('开户城市','text','请选择', '请选择开户城市')
+
+        +input('开户银行', 'text',"请输入", false, '请输入开户行',false)
+
+        +input('预留手机', 'tel',"请输入", false, '请输入手机号',false)
+
+        +input('验证码', 'text',"请输入验证码", true, '请输入验证码',false)
+
+
+    
+    
+    .btn-box
+      a.btn(href="") 完成
+
+block individual-script
+  script(src='../js/city-json.js')
+  script(src="../js/modal-popup.js")
+  script(src="../js/wap-account.js")

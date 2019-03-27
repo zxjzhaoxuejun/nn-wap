@@ -1,0 +1,128 @@
+.modal-mask{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+
+  .modal-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background: #000000;
+    z-index: 1000;
+  }
+
+  .modal-body{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 300px;
+    background: #ffffff;
+    z-index: 1001;
+    
+    .modal-header{
+      position: relative;
+      padding: 16px 0;
+      text-align: center;
+
+      .modal-title{
+        font-size: 15px;
+        color: #2D191A;
+      }
+
+      .modal-close{
+        position: absolute;
+        top: 16px;
+        right: 18px;
+        width: 20px;
+        height: 20px;
+        font-size: 15px;
+        color: #2D191A;
+        background: url('../../img/modal_close.svg') no-repeat;
+      }
+    }
+
+    .choose-answer{
+      position: relative;
+      // display: flex;
+      // justify-content: space-around;
+      width: 100%;
+      // border-bottom: 1px solid #EAE1E1;
+      padding-bottom: 1px;
+
+      &::after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: inline-block;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #EAE1E1;
+        transform:scaleY(0.5);
+      }
+    }
+
+    .one-list-center{
+      text-align: center;
+    }
+
+    .choose-answer-items{
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+      display: inline-block;
+      width: 32%;
+      text-align: center;
+      font-size: 15px;
+      padding: 4px 0;
+      cursor: pointer;
+
+      span{
+        cursor: pointer;
+        -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+      }
+    }
+
+    .one-list{
+      width: 100%;
+    }
+
+    .active{
+      color:$croci;
+      border-bottom: 2px solid $croci;
+    }
+
+    .hide{
+      display: none;
+    }
+
+    .choose-lists{
+      height: 100%;
+      max-height: 200px;
+      overflow-y: auto;
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    }
+
+    .choose-items,.choose-child-items,.choose-last-items{
+      -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+      text-align: center;
+      padding: 12px 0;
+      cursor: pointer;
+    }
+  }
+}
+
+//弹窗定位
+.bodyFlex {
+  overflow-y: hidden;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}

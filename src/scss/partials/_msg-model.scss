@@ -1,0 +1,96 @@
+.msg-mode{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+
+  .msg-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+    background: #000000;
+    z-index: 1000;
+  }
+
+  .msg-con{
+    position: fixed;
+    top:0;
+    left:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+ 
+    
+    .msg-body{
+      position: relative;
+      width: 80%;
+      padding: 44px 0;
+      border-radius: 4px;
+      background:$white;
+
+      .msg-info{
+        text-align: center;
+        line-height: 26px;
+      }
+
+      .msg-icon{
+        display: block;
+        margin: 10px auto;
+        text-align: center;
+      }
+
+      .icon-complete{//已完成协议签署图标
+        width: 45px;
+        height: 45px;
+        background: url(../../img/icon_complete.svg) no-repeat;
+      }
+
+      .icon-signin{//签署中
+        width: 30px;
+        height: 7px;
+        background:url(../../img/icon_signin.gif) no-repeat;
+      }
+
+      .msg-close{
+        position: absolute;
+        top:0;
+        right: 0;
+        width: 22px;
+        height: 22px;
+        padding: 8px;
+        background: url(../../img/icon_close.svg) no-repeat center;
+        cursor: pointer;
+      }
+    }
+
+    .msg-body-bg{
+      background: #000000;
+      opacity: 0.6;
+    }
+  }
+
+  .show{
+    display: block;
+  }
+
+  .hide{
+    display: none;
+  }
+
+  .show-text{
+    color: $white;
+  }
+
+  .hide-text{
+    color: $high-text;
+  }
+
+}

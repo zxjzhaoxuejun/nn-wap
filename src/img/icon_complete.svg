@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="45px" height="45px" viewBox="0 0 45 45" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_complete</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="45" height="45"></rect>
+    </defs>
+    <g id="icon_complete" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g>
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <g id="Mask" fill-rule="nonzero"></g>
+            <g id="分组-6" mask="url(#mask-2)">
+                <g transform="translate(4.000000, 2.000000)">
+                    <g id="分组-3" transform="translate(0.500000, 0.000000)">
+                        <rect id="矩形" fill="#DCDCDC" fill-rule="nonzero" x="0" y="0" width="36" height="37" rx="4"></rect>
+                        <path d="M7.38861626,9.5 L19.6729708,9.5" id="路径-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill-rule="nonzero"></path>
+                        <path d="M7.32702921,17.5 L28.1807359,17.5" id="路径-2-copy" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill-rule="nonzero"></path>
+                        <path d="M7.32702921,26 L28.1807359,26" id="路径-2-copy-2" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" fill-rule="nonzero"></path>
+                    </g>
+                    <g id="分组-copy-3" transform="translate(26.500000, 28.000000)">
+                        <circle id="椭圆形" fill="#69A262" fill-rule="nonzero" cx="7" cy="7" r="7"></circle>
+                        <polyline id="路径" stroke="#FFFFFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill-rule="nonzero" transform="translate(7.212311, 6.212311) rotate(-135.000000) translate(-7.212311, -6.212311) " points="5.4623106 9.7123106 5.4623106 7.37897727 5.4623106 2.7123106 7.79564393 2.7123106 8.9623106 2.7123106"></polyline>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

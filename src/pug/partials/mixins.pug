@@ -1,0 +1,81 @@
+//- wap-开户列表
+//-loanCardType,payCardType，false表示未绑卡，true表示已绑卡
+//-money额度,channel渠道, periods期数, loanCard放款卡, payCard还款卡
+mixin account-items(money,channel, periods, loanCard, payCard,loanCardType,payCardType)
+  .list-items
+      .credit-line
+        .credit-title 授信额度
+        .credit-money&attributes(attributes)=money
+      .credit-info
+        .credit-list
+          span.list-name 资金渠道
+          span.list-value=channel
+        .credit-list
+          span.list-name 期&emsp;&emsp;数
+          span.list-value=periods
+        .credit-list
+          span.list-name 放款卡
+          if loanCardType
+            span.list-value.card-check-icon=loanCard
+          else
+            a.band-card(href="javascript:;")=loanCard
+        .credit-list
+          span.list-name 还款卡
+          if payCardType
+            span.list-value.card-check-icon=payCard
+          else
+            a.band-card(href="javascript:;")=payCard
+
+
+//- 输入项
+//-isBtn 是否有获取验证码按钮 true/false
+//-codeActive 验证码按钮是否点击 true/false
+mixin input(title, type, placeholder, isBtn, error,codeActive)
+  
+  .input&attributes(attributes)
+    .content
+      .title=title
+      input.input-val(type=type,placeholder=placeholder)
+      if isBtn
+        if codeActive
+          a.get-code.default-code(href="javascript:;") 重新获取59s
+        else
+          a.get-code(href="javascript:;") 获取验证码
+    .error-msg=error
+    if isBtn
+      .code-text 验证码已发送到您的手机，10分钟内有效
+
+
+//- 请选择
+mixin select(title,type,placeholder, error)
+  .input&attributes(attributes)
+    .content
+      .title=title
+      input.input-val.choose(type=type,placeholder=placeholder,readonly)
+      .icon
+    .error-msg=error
+
+
+//- 签约列表,number编号,money金额
+mixin sign-list(number,money)
+  .sign-list
+    .serial-number
+      span.serial-name 编号:
+      span.serial-val=number
+    .sign-money
+      span.money=money
+      a.check-file(href="javascript:;") 合同详情
+      .icon.arrow-right
+
+//- wap-提现协议列表
+//-loanCardType,payCardType，false表示未绑卡，true表示已绑卡
+//-money额度,channel渠道, periods期数, loanCard放款卡, payCard还款卡
+mixin withdrawal-list(title,type,typeVal)
+  .withdrawal-list
+      .withdrawal-title=title
+      .withdrawal-type
+        if type
+          span.type-val=typeVal
+        else
+          a.go-notarize(href="javascript:;")=typeVal
+          

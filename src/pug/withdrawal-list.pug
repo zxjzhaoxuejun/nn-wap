@@ -1,0 +1,40 @@
+extend partials/layout.pug
+
+block title
+  title 提现协议列表
+
+block main
+  include ./partials/mixins.pug
+  .account-list
+    .list-head
+      .list-head-page
+        span.page-items 3/3
+      .list-head-info 已完成合同签署，应监管要求，贷款发放前您需要再次确认，请完成以下协议签署。备注：部分资金渠道提现需要隔天才可以签署。如有疑问请拨打中安信业客服电话：XXXXXXX
+    
+    +withdrawal-list('安合网提现协议',true,'已确认')
+
+    +withdrawal-list('凤凰金融提现协议',false,'去确认')
+
+    .btn-box
+      a.btn(href="") 完成
+    
+block individual-script
+  script(src="../js/wap-account.js")
+  script.
+    //- $('body').messageModel({
+    //-   time:true,
+    //-   content: "还有待确认的提现协议"
+    //- });
+
+    $('body').messageModel({
+      time:false,
+      content: "合同详签署中…",
+      icon:'icon-signin'
+    });
+
+    //- $('body').messageModel({
+    //-   time:false,
+    //-   content: "已完成协议签署",
+    //-   icon:'icon-complete'
+    //- });
+    

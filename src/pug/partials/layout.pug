@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="../lib/idangerous.swiper.css")
+    link(rel="stylesheet", href="../scss/main.scss")
+    block title
+      title 默认
+  body
+    //- block header
+    //-   include header.pug
+  
+    block main
+
+    //- block footer
+    //-   include footer.pug
+
+    block modal
+
+    //- 页面公共脚本
+    script(src="../lib/jquery-1.12.4.min.js")
+    script(src="../lib/jquery.enplaceholder.js")
+
+    //- 针对 IE 8 及以下版本
+    include ie-polyfill.pug
+
+  //- 用于单个页面引入的脚本
+  block individual-script
